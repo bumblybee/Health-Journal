@@ -1,0 +1,24 @@
+<%- include("partials/header") -%>
+
+
+<% posts.forEach((post) => { %>
+<div class="card mb-3 p-4 w-75">
+ <div class="card-content">
+    <h1 class="card-title"><%= post.title %></h1>
+    <p class="text-muted">Rating: <%= post.rating %></p>
+    <p class="card-text"><%= post.content.substring(0, 180) + "..." %> <a href="/posts/<%= post.title %>">Read More</a></p>
+    
+    <section class="text-right text-secondary mr-2">
+       <span class="mb-0"><%= post.today %></span>
+       <br /> 
+      <span class="mt-0"><%= post.time %></span> 
+   </section>
+ </div>
+</div>
+
+<% }) %>
+
+
+
+
+<%- include("partials/footer") -%>

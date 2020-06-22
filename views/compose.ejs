@@ -1,0 +1,25 @@
+<%- include("partials/header") -%>
+
+
+<form method="post" action="/compose">
+     <div class="form-group">
+    <label for="rating">Rating</label>
+    <select class="form-control" id="rating" name="rating">
+      <% ratingNums.forEach(num => { %>
+        
+        <option><%= num %></option>
+     <% })%>
+    </select>
+  </div>
+    <div class="form-group">
+        <label>Title</label>
+<input class="form-control" type="text" name="titleText">
+</div>
+<div class="form-group">
+    <label>Details</label>
+<textarea class="form-control" name="postText" id="post" rows="10"></textarea>
+</div>
+<button name="button" class="btn btn-primary">Publish</button>
+</form>
+
+<%- include("partials/footer") -%>
