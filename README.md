@@ -1,2 +1,2 @@
 Health journal for tracking daily wellbeing.
-Uses MongoDB, Mongoose, Express, Node, Bootstrap.
+Uses MongoDB, Mongoose, Express, Node, Bootstrap, EJS.
