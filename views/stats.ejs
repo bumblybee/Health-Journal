@@ -1,20 +1,23 @@
 <%- include("partials/header") -%>
 
 <div class="container">
-    <div class="container mb-4">
-        <h3 class="text-muted">Daily Average: <span class="text-muted"><%= average %></span></h3>
+
+    <div class="container mb-4 p-3 rounded w-75">
+        <h2 class="text-muted">Daily Average Rating: <span class="text-muted"><%= average %></span></h2>
     </div>
     
-    <form method="post" action="/stats">
-        <div class="card-content p-3">
-    <div class="form-group">
-        <label for="dateSearch">Search Dates:</label>
-        <input class="form-control w-50" type="date" name="dateSearch" id="dateSearch" />
-    </div>
-    <button class="btn btn-primary" type="submit" name="button">Search</button>
+    <div class="card w-75 mx-auto">
+        <form method="post" action="/stats">
+            <div class="card-content p-3 text-center">
+                <div class="form-group">
+                    <label for="dateSearch">Search Posts By Date:</label>
+                    <input class="form-control w-75 pb-2 mx-auto" type="date" name="dateSearch" id="dateSearch" />
+                </div>
+                <button class="btn btn-primary btn-sm p-2" type="submit" name="button">Search</button>
+            </div>
+        </form>
+        </div>
     
-    </form>
-    </div>
 </div>
 
 <%- include("partials/footer") -%>

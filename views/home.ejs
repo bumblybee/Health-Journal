@@ -2,11 +2,11 @@
 
 
 <% posts.forEach((post) => { %>
-<div class="card mb-3 p-4 w-75">
+<div class="card mb-3 p-4">
  <div class="card-content">
     <h1 class="card-title"><%= post.title %></h1>
     <p class="text-muted">Rating: <%= post.rating %></p>
-    <p class="card-text"><%= post.content.substring(0, 180) + "..." %> <a href="/posts/<%= post.title %>">Read More</a></p>
+    <p class="card-text"><%= post.content.substring(0, 200) + "..." %> <a href="/posts/<%= post._id %>">Read More</a></p>
     
     <section class="text-right text-secondary mr-2">
        <span class="mb-0"><%= post.today %></span>
